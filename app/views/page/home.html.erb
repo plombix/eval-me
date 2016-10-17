@@ -1,10 +1,6 @@
-<h1>Page#home</h1>
-<p>Find me in app/views/page/home.html.erb</p>
 
-
-
-<%=@all_eval.each do |eval| %>
+<%@all_eval.each do |eval| %>
 <p>
-<%= link_to "eval.name"%>
+<%= link_to "#{eval.name}", page_evaluation_path(id: eval.id) %>
 </p>
 <% end %>

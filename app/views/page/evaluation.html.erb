@@ -1,0 +1,22 @@
+<div>
+	<%= @student.email %>
+</div>
+<div>
+<%= @eval.name %>
+</div>
+<% @answers.each do |line|  %>
+<div>
+	<%= line[0] %>
+</div>
+<div>
+<%@answer = current_user.answer.where(question_id: line[1][:question_id]).first || Answer.new%>
+	<%= form_for @answer do |ans|%>
+	<%= ans.hidden_field :question_id, :value => line[1][:question_id]%>
+	<%= ans.hidden_field :user_id, :value => line[1][:user_id]%>
+	<%= ans.text_field :student_answer , :value => @answer.student_answer || ''%>
+	<%= ans.submit %>
+	<% end %>
+</div>
+<% end %>
+
+

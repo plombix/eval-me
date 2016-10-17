@@ -4,7 +4,7 @@ class EvalsController < ApplicationController
   # GET /evals
   # GET /evals.json
   def index
-    @evals = Eval.all
+    @all_eval = Eval.all
   end
 
   # GET /evals/1

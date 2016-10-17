@@ -36,7 +36,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
-
+# Unobtrusive in-place editing
+gem 'best_in_place'
 group :development, :test do
   gem 'listen'
   # Access an PRY console on local server or by using <%= binding.pry %>  anywhere you need it (migration , seed ,views ,model etcetc)

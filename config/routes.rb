@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get 'page/home'
   get 'page/evaluation'
 
+
+  resources :answers 
+ 
+
   devise_for :users
   root "page#home"
 end
