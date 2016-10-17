@@ -1,0 +1,18 @@
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ pool: 5
+ timeout: 5000
+
+development:
+ <<: *default
+ database: dev_survey
+
+test:
+ <<: *default
+ database: test_survey
+
+
+production:
+ <<: *default
+ database: prod_survey
