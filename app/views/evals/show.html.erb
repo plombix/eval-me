@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @eval.name %>
+</p>
+
+<p>
+  <strong>Intro:</strong>
+  <%= @eval.intro %>
+</p>
+
+<% @questions.each do |quest|%>
+<p>
+	<%= quest.statement%>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_eval_path(@eval) %> |
+<%= link_to 'add_question', new_eval_question_path(@eval) %> |
+<%= link_to 'Back', evals_path %>

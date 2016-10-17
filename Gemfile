@@ -41,6 +41,8 @@ group :development, :test do
   gem 'listen'
   # Access an PRY console on local server or by using <%= binding.pry %>  anywhere you need it (migration , seed ,views ,model etcetc)
   gem 'pry'
+  # export relations as schemas 
+  gem 'rails-erd'
   # Add "continue" ,"next", "step" on pry (usefull in loops or stack exploration)
   gem 'pry-nav'
   gem 'pry-stack_explorer'
