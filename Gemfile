@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -30,7 +30,7 @@ gem 'carrierwave'
 gem 'bootstrap_form'
 # Css & Js library
 gem 'bootstrap-sass' 
-
+gem 'devise-bootstrap-views'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
