@@ -6,11 +6,9 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('page:load', function() {
+  window['rangy'].initialized = false
+});
 
-$(document).ready(function() {
-  $('#quest_edit').each(function(i, elem) {
-    $(elem).wysihtml5();
-  });
-})
 
 $(".best_in_place").best_in_place();
