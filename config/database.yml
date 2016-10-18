@@ -12,6 +12,8 @@ test:
  <<: *default
  database: test_survey
 
-
 production:
-  url: <%= ENV['DATABASE_URL'] %>
+  <<: *default
+  database: eval-me_production
+  username: eval-me
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
