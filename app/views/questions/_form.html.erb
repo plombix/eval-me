@@ -9,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="field wysihtml5">
+  <div class="field ">
     <%= f.text_area :statement , id: "quest_edit", class: "wysihtml5" %>
   </div>
   <div class="field">
@@ -19,3 +19,10 @@
     <%= f.submit %>
   </div>
 <% end %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#quest_edit').each(function(i, elem) {
+      $(elem).wysihtml5();
+    });
+  })
+</script>

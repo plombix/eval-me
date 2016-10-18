@@ -7,8 +7,6 @@
 //= require_tree .
 
 
-
-
 $(document).ready(function() {
   $('#quest_edit').each(function(i, elem) {
     $(elem).wysihtml5();
