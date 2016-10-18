@@ -1,18 +1,13 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>User:</strong>
   <%= @answer.user.email %>
 </p>
-
 <p>
   <strong>Question:</strong>
-  <%= @answer.question.statement %>
-
-<p>
-  <strong>Votre reponse</strong>
-  <%= @answer.student_answer %>
+  <%= @answer.question.statement.html_safe %>
+  <p>
+    <strong>Votre reponse</strong>
+    <%= @answer.student_answer %>
+  </p>
 </p>
-</p>
-
 <%= link_to 'Ok', page_evaluation_path(id:  @answer.question.eval.id), class: "btn btn-lg btn-success" %>

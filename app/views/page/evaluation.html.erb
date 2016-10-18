@@ -5,7 +5,7 @@
 <br>
 <br>
 <% @answers.each do |line|  %>
-    <h3 style="font-family: 'Paytone One', sans-serif ;">
+  <h3 style="font-family: 'Paytone One', sans-serif ;">
     <%= line[0].html_safe %>
   </h3>
   <div>
@@ -13,7 +13,7 @@
     <%= bootstrap_form_for(@answer, remote: true )do |ans|%>
       <%= ans.hidden_field :question_id, :value => line[1][:question_id]%>
       <%= ans.hidden_field :user_id, :value => line[1][:user_id]%>
-      <%= ans.text_field :student_answer , :value => @answer.student_answer || '' , label: "Réponse :" %>
+      <%= ans.text_field :student_answer , :value => @answer.student_answer || '' ,class: "has-warning",  label: "Réponse :" %>
       <%= ans.submit %>
     <% end %>
   </div>
