@@ -12,13 +12,15 @@
 
 <% @questions.each do |quest|%>
 <p>
-	<%= quest.statement %>
+  <%= quest.statement %>
   <span>
     <%= link_to "edit", edit_eval_question_path(@eval.id), class: "btn btn-xs btn-default"%>
   </span>
 </p>
 <% end %>
 
-<%= link_to 'Edit', edit_eval_path(@eval) %> |
-<%= link_to 'add_question', new_eval_question_path(@eval) %> |
+<%= link_to 'Edit', edit_eval_path(@eval) %>
+|
+<%= link_to 'add_question', new_eval_question_path(@eval) %>
+|
 <%= link_to 'Back', evals_path %>

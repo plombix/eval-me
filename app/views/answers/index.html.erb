@@ -1,31 +1,26 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Answers</h1>
 <% @answers.each do |eval_group| %>
-    <%intero = eval_group.shift%>
-    <h3><%=intero.name%></h3>
-
-    <table class="table ">
-      <thead>
-        <tr>
-          <th>User</th>
-          <th>Question</th>
-          <th>Student answer</th>
-        </tr>
-      </thead>
+  <%intero = eval_group.shift%>
+  <h3><%=intero.name%></h3>
+  <table class="table ">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Question</th>
+        <th>Student answer</th>
+      </tr>
+    </thead>
     <%eval_group[0].each do |answer|%>
-
       <tbody>
-          <tr>
-            <td><%= answer.user.email %></td>
-            <td><%= answer.question.statement %></td>
-            <td><%= answer.student_answer %></td>
-          </tr>
+        <tr>
+          <td><%= answer.user.email %></td>
+          <td><%= answer.question.statement %></td>
+          <td><%= answer.student_answer %></td>
+        </tr>
       </tbody>
     <% end %>
-    </table>
-
-    <br>
+  </table>
+  <br>
 <% end %>
-
 <%= link_to 'New Answer', new_answer_path %>
