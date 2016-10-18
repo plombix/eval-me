@@ -1,26 +1,20 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @eval.name %>
 </p>
-
 <p>
   <strong>Intro:</strong>
   <%= @eval.intro %>
 </p>
-
 <% @questions.each do |quest|%>
-<p>
-  <%= quest.statement %>
-  <span>
-    <%= link_to "edit", edit_eval_question_path(@eval.id), class: "btn btn-xs btn-default"%>
-  </span>
-</p>
+  <p>
+    <%= quest.statement %>
+    <span>
+      <%= link_to "edit", edit_eval_question_path(@eval,quest), class: "btn btn-xs btn-default"%>
+    </span>
+  </p>
 <% end %>
-
-<%= link_to 'Edit', edit_eval_path(@eval) %>
-|
-<%= link_to 'add_question', new_eval_question_path(@eval) %>
-|
-<%= link_to 'Back', evals_path %>
+<%= link_to 'Edit', edit_eval_path(@eval), class: "btn btn-default" %>
+<%= link_to 'add_question', new_eval_question_path(@eval), class: "btn btn-default" %>
+<%= link_to 'Back', evals_path , class: "btn btn-default"%>
