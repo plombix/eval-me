@@ -5,9 +5,9 @@
 <br>
 <br>
 <% @answers.each do |line|  %>
-  <h1 style="font-family: 'Paytone One', sans-serif ;">
+  <h3 style="font-family: 'Paytone One', sans-serif ;">
     <%= line[0].html_safe %>
-  </h1>
+  </h3>
   <div>
     <%@answer = current_user.answer.where(question_id: line[1][:question_id]).first || Answer.new%>
     <%= bootstrap_form_for(@answer, remote: true )do |ans|%>
