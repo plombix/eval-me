@@ -2,7 +2,7 @@
 
 <h1>Evals</h1>
 
-<table>
+<table class="table table-responsive">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= eval.name %></td>
         <td><%= eval.intro %></td>
-        <td><%= link_to 'Show', eval %></td>
-        <td><%= link_to 'Edit', edit_eval_path(eval) %></td>
-        <td><%= link_to 'Destroy', eval, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', eval ,class: "btn btn-default"%></td>
+        <td><%= link_to 'Edit', edit_eval_path(eval) ,class: "btn btn-default"%></td>
+        <td><%= link_to 'Destroy', eval, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-default"%></td>
         <td><%= best_in_place eval, :viewable, as: :checkbox, collection: {false: "Nope", true: "Yep"} %></td>
       </tr>
     <% end %>
