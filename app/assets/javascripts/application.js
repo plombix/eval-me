@@ -6,9 +6,6 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('page:load', function() {
-  window['rangy'].initialized = false
-});
 
 
 $(".best_in_place").best_in_place();
