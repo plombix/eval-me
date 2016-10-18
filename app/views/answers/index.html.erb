@@ -3,7 +3,7 @@
 <% @answers.each do |eval_group| %>
   <%intero = eval_group.shift%>
   <h3><%=intero.name%></h3>
-  <table class="table ">
+  <table class="table table-responsive">
     <thead>
       <tr>
         <th>User</th>
@@ -15,7 +15,7 @@
       <tbody>
         <tr>
           <td><%= answer.user.email %></td>
-          <td><%= answer.question.statement %></td>
+          <td><%= answer.question.statement.html_safe %></td>
           <td><%= answer.student_answer %></td>
         </tr>
       </tbody>
