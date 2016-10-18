@@ -8,7 +8,7 @@ class PageController < ApplicationController
 
   def evaluation
     # binding.pry
-    @questions = @eval.questions.sort_by { rand }
+    @questions = @eval.questions.sort
     @answers = @questions.map { |quest| [quest.statement, user_id: current_user.id, question_id: quest.id] }
   end
 
