@@ -10,7 +10,7 @@
     </div>
   <% end %>
   <div class="field ">
-    <%= f.text_area :statement , id: "quest_edit", class: "wysihtml5" %>
+    <%= f.text_area :statement , id: "quest_edit"%>
   </div>
   <div class="field">
     <%= f.collection_select :eval_id, Eval.all, :id, :name,{:selected => @eval.id}%>
@@ -21,8 +21,8 @@
 <% end %>
 <script type="text/javascript">
   $(document).ready(function() {
-      $('#quest_edit').each(function(i, elem) {
-        $(elem).wysihtml5();
-      });
-    })
+        $('#quest_edit').each(function(i, elem) {
+          $(elem).wysihtml5();
+        });
+      })
 </script>
