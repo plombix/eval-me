@@ -12,7 +12,10 @@
 
 <% @questions.each do |quest|%>
 <p>
-	<%= quest.statement%>
+	<%= quest.statement %>
+  <span>
+    <%= link_to "edit", edit_eval_question_path(@eval.id), class: "btn btn-default"%>
+  </span>
 </p>
 <% end %>
 
