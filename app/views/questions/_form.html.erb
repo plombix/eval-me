@@ -2,24 +2,19 @@
   <% if question.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
-
       <ul>
-      <% question.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% question.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.text_area :statement %>
+  <div class="field wysihtml5">
+    <%= f.text_area :statement , id: "quest_edit", class: "wysihtml5" %>
   </div>
-
   <div class="field">
-
     <%= f.collection_select :eval_id, Eval.all, :id, :name,{:selected => @eval.id}%>
   </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

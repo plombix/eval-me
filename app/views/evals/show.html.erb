@@ -9,7 +9,7 @@
 </p>
 <% @questions.each do |quest|%>
   <p>
-    <%= quest.statement %>
+    <%= quest.statement.html_safe %>
     <span>
       <%= link_to "edit", edit_eval_question_path(@eval,quest), class: "btn btn-xs btn-default"%>
     </span>
