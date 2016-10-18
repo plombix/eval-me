@@ -1,10 +1,10 @@
 class AnswersController < ApplicationController
   before_action :set_answer, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_perm, except: [:show, :new, :create, :update]
   # GET /answers
   # GET /answers.json
   def index
-    @answers = Answer.all
+    @answers = Answer.all.group_by(&:eval)
   end
 
   # GET /answers/1
@@ -66,7 +66,12 @@ class AnswersController < ApplicationController
     def set_answer
       @answer = Answer.find(params[:id])
     end
-
+    def check_perm
+      unless current_user.email == 'plombix@gmail.com'
+        flash[:alert] = "Nope, nope, nope"
+        redirect_to root_path
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def answer_params
       params.require(:answer).permit(:student_answer, :user_id, :question_id)
