@@ -1,0 +1,1 @@
+json.array! @alloweds, partial: 'alloweds/allowed', as: :allowed

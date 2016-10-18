@@ -1,22 +1,21 @@
-<div>
-	<%= @student.email %>
-</div>
-<div>
+
+<h1 style="font-size:40px" class="pull-right">
 <%= @eval.name %>
-</div>
+</h1>
+<br>
+<br>
+<br>
 <% @answers.each do |line|  %>
-<div>
+<h1 style="font-family: 'Paytone One', sans-serif ;">
 	<%= line[0] %>
-</div>
+</h1>
 <div>
 <%@answer = current_user.answer.where(question_id: line[1][:question_id]).first || Answer.new%>
-	<%= form_for @answer do |ans|%>
+  <%= bootstrap_form_for(@answer, remote: true )do |ans|%>
 	<%= ans.hidden_field :question_id, :value => line[1][:question_id]%>
 	<%= ans.hidden_field :user_id, :value => line[1][:user_id]%>
-	<%= ans.text_field :student_answer , :value => @answer.student_answer || ''%>
+	<%= ans.text_field :student_answer , :value => @answer.student_answer || '' , label: "Réponse :" %>
 	<%= ans.submit %>
-	<% end %>
+  <% end %>
 </div>
 <% end %>
-
-

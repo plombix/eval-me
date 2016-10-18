@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017092231) do
+ActiveRecord::Schema.define(version: 20161017143819) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alloweds", force: :cascade do |t|
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "answers", force: :cascade do |t|
     t.text     "student_answer"
@@ -30,6 +36,7 @@ ActiveRecord::Schema.define(version: 20161017092231) do
     t.text     "intro"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "viewable"
   end
 
   create_table "questions", force: :cascade do |t|

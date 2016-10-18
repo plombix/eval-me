@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Student answer:</strong>
-  <%= @answer.student_answer %>
-</p>
-
-<p>
   <strong>User:</strong>
-  <%= @answer.user %>
+  <%= @answer.user.email %>
 </p>
 
 <p>
   <strong>Question:</strong>
-  <%= @answer.question %>
+  <%= @answer.question.statement %>
+
+<p>
+  <strong>Votre reponse</strong>
+  <%= @answer.student_answer %>
+</p>
 </p>
 
-<%= link_to 'Edit', edit_answer_path(@answer) %> |
-<%= link_to 'Back', answers_path %>
+<%= link_to 'Back', answers_path( @answer.question.eval.id) %>

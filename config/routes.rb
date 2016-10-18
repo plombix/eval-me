@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :alloweds
   resources :answers
   resources :evals do
   	resources :questions

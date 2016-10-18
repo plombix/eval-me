@@ -1,6 +1,9 @@
 
-<%@all_eval.each do |eval| %>
-<p>
-<%= link_to "#{eval.name}", page_evaluation_path(id: eval.id) %>
-</p>
+<div class="col-xs-offset-3 col-xs-6">
+	<%@all_eval.each do |eval| %>
+	<p>
+		<%= link_to_if eval.viewable, "#{eval.name}", page_evaluation_path(id: eval.id), class:"btn btn-default" , id:"eval_title", style:"font-family: 'Syncopate', sans-serif ;width:100%;font-size:20px;" %>
+	</p>
 <% end %>
+
+</div>

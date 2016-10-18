@@ -1,4 +1,4 @@
-<%= form_for(eval) do |f| %>
+<%= bootstrap_form_for(eval) do |f| %>
   <% if eval.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(eval.errors.count, "error") %> prohibited this eval from being saved:</h2>
@@ -12,12 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :intro %>
     <%= f.text_area :intro %>
   </div>
 

@@ -1,5 +1,6 @@
 class EvalsController < ApplicationController
   before_action :set_eval, only: [:show, :edit, :update, :destroy]
+  before_action :check_perm 
 
   # GET /evals
   # GET /evals.json
@@ -67,9 +68,14 @@ class EvalsController < ApplicationController
     def set_eval
       @eval = Eval.find(params[:id])
     end
-
+    def check_perm
+      unless current_user.email == 'plombix@gmail.com'
+        flash[:alert] = "Nope, nope, nope"
+        redirect_to root_path
+      end
+    end
     # Never trust parameters from the scary internet, only allow the white list through.
     def eval_params
-      params.require(:eval).permit(:name, :intro)
+      params.require(:eval).permit(:name, :intro,:viewable)
     end
 end

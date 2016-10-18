@@ -2,25 +2,31 @@
 <html>
   <head>
     <title>Eval1</title>
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One|Syncopate:700" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container-fluid">
+  <body class="container-fluid" style="background-color:#BEC4C6 !important; ">
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-          <li></li>
-          <% if current_user %>
-          <li><%= link_to 'Edit Profile',edit_user_registration_path %></li>
+          <% if current_user && current_user.email == "plombix@gmail.com" %>
+          <li>Good Day Commander</li>
+          <li><%= link_to "Nouvelle Eval",new_eval_path %></li>
+          <li><%= link_to "#{current_user.email}",edit_user_registration_path %></li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
-          
+          <% elsif current_user %>
+          <li><%= link_to "#{current_user.email}",edit_user_registration_path %></li>
+          <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
           <% else %>
           <li><%= link_to 'Login', new_user_session_path %></li>
           <% end %>
       </ul>
   </div>
+  <div class="message"> <%= flash_messages %></div>
+
     <div class="col-offset-xs-1 col-xs-10">
     	<%= yield %>
     </div>
