@@ -7,6 +7,10 @@
   <strong>Intro:</strong>
   <%= @eval.intro %>
 </p>
+<p>
+  <strong>Questions nb::</strong>
+  <%= @questions.count %>
+</p>
 <% @questions.each do |quest|%>
   <p>
     <%= quest.statement.html_safe %>
