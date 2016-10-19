@@ -14,7 +14,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+# easy db to seeds.rb transfer
 gem 'seed_dump'
+# beautiful js tables
 gem 'jquery-datatables-rails', '~> 3.4.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -27,6 +29,8 @@ gem 'devise'
 # Uploader
 gem 'carrierwave'
 # Fancy form
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 gem 'bootstrap_form'
 # Css & Js library
 gem 'bootstrap-sass'
