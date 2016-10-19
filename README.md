@@ -1,24 +1,25 @@
-# README
+# Evaluation application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is for me to evaluate students
 
-Things you may want to cover:
+https://eval-me.herokuapp.com
 
-* Ruby version
+People have to be white listed to be able to signup
+a demonstration account is setup :
 
-* System dependencies
+  test@test.com
+  password
 
-* Configuration
+In backoffice there is many feature such as
+creation of evaluations with some ajax here and there
+  possibility to mark evaluations as "viewable"
+  exportation of results in pdf
+  richtext edition for questions in order to make them more readable
+  .....
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[TODO]:
+  image in questions 
+  csv importation of whitelisted account
+  polymorphism on answertype (text , radios , selections etcect)
+  machanisation of correction
+  csf export of results
