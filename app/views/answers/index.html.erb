@@ -10,15 +10,18 @@
         <th>Student answer</th>
       </tr>
     </thead>
-    <%eval_group[0].each do |answer|%>
+
       <tbody>
+
+            <%eval_group[0].sort_by {|x| x.user_id}.each do |answer|%>
         <tr>
           <td><%= answer.user.email %></td>
           <td><%= answer.question.statement.html_safe %></td>
           <td><%= answer.student_answer %></td>
         </tr>
+            <% end %>
       </tbody>
-    <% end %>
+
   </table>
   <br>
 <% end %>
