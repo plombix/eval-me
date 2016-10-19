@@ -1,9 +1,9 @@
 <%= wicked_pdf_stylesheet_link_tag "print.css" -%>
-<h1>Answers</h1>
+
 <% @answers.each do |eval_group| %>
   <%intero = eval_group.shift%>
   <h3><%=intero.name%></h3>
-  <table class="table table-responsive">
+  <table class="table table-responsive table-striped">
     <thead>
       <tr>
         <th>User</th>
@@ -11,7 +11,16 @@
       </tr>
     </thead>
       <tbody>
+        <%i = 0%>
+        <%a = nil%>
               <%eval_group[0].sort_by {|x| x.user_id}.each do |answer|%>
+              <%if i == 0 || a == answer.user.email %>
+              <%else%>
+            </table>
+          </tbody>
+          <table class="table table-responsive table-striped">
+            <tbody>
+              <%end%>
         <tr>
           <td><%= answer.user.email %></td>
           <td><%= answer.question.statement.html_safe %></td>
@@ -19,10 +28,11 @@
         <tr>
           <td colspan="2"><%= answer.student_answer %></td>
         </tr>
+        <% a = answer.user.email %>
+        <% i+=1 %>
               <% end %>
       </tbody>
 
   </table>
   <br>
 <% end %>
-<%= link_to 'New Answer', new_answer_path %>
