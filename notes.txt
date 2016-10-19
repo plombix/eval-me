@@ -1,5 +1,0 @@
-	_validation ? 
-	_whitelist
-	_evals : 	git 
-				shell lv1
-	_front

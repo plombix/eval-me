@@ -10,7 +10,7 @@ a demonstration account is setup :
   test@test.com
   password
 
-In backoffice there is many feature such as
+In backoffice there is many feature such as :
   - creation of evaluations with some ajax here and there
   - possibility to mark evaluations as "viewable"
   - exportation of results in pdf
