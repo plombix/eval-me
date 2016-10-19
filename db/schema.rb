@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 20161017143819) do
   create_table "evals", force: :cascade do |t|
     t.string   "name"
     t.text     "intro"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "viewable"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "viewable",   default: false
   end
 
   create_table "questions", force: :cascade do |t|
