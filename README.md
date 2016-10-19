@@ -11,10 +11,10 @@ a demonstration account is setup :
   password
 
 In backoffice there is many feature such as
-creation of evaluations with some ajax here and there
-  possibility to mark evaluations as "viewable"
-  exportation of results in pdf
-  richtext edition for questions in order to make them more readable
+  - creation of evaluations with some ajax here and there
+  - possibility to mark evaluations as "viewable"
+  - exportation of results in pdf
+  - richtext edition for questions in order to make them more readable
   .....
 
 [TODO]:
