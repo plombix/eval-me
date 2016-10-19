@@ -18,8 +18,12 @@ creation of evaluations with some ajax here and there
   .....
 
 [TODO]:
-  image in questions 
-  csv importation of whitelisted account
-  polymorphism on answertype (text , radios , selections etcect)
-  machanisation of correction
-  csf export of results
+  - image in questions
+
+  - csv importation of whitelisted account
+
+  - polymorphism on answertype (text , radios , selections etcect)
+
+  - mechanisation of correction
+
+  - csf export of results
