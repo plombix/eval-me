@@ -5,6 +5,12 @@ class AnswersController < ApplicationController
   # GET /answers.json
   def index
     @answers = Answer.all.group_by(&:eval)
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "All_answers_#{Time.now}"   # Excluding ".pdf" extension.
+      end
+    end
   end
 
   # GET /answers/1
