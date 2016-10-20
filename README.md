@@ -18,7 +18,7 @@ In backoffice there is many feature such as :
   .....
 
 Db structure so far :
-![alt tag](https://raw.githubusercontent.com/plombix/eval-me/erd.png)
+![alt tag](https://github.com/plombix/eval-me/blob/master/erd.png?raw=true)
 
 
 [TODO]:
