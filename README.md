@@ -17,6 +17,10 @@ In backoffice there is many feature such as :
   - richtext edition for questions in order to make them more readable
   .....
 
+Db structure so far :
+![alt tag](https://raw.githubusercontent.com/plombix/eval-me/erd.png)
+
+
 [TODO]:
   - image in questions
 
